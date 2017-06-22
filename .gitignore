@@ -1,3 +1,4 @@
 node_modules
 dist
-src/config/certs
+src/config/dev/certs
+src/config/prod/certs
