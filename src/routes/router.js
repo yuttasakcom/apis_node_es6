@@ -1,5 +1,9 @@
-export default function(app) {
-    app.use('/', (req, res) => {
-        res.send('Welcome to node api with JavaScript2015')
+import client from './client'
+
+export default (app) => {
+    app.use('/client', client)
+
+    app.use('*', (req, res) => {
+        res.status(400).send({msg: 'Api not support!'})
     })
 }
