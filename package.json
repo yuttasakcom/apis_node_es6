@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
-    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\""
+    "dev": "NODE_ENV=dev nodemon -w src --exec \"babel-node src --presets es2015,stage-0\""
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -17,6 +17,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "https": "^1.0.0"
   }
 }
