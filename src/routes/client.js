@@ -1,8 +1,7 @@
 import express from 'express'
 const router = express.Router()
+import ClientController from '../controllers/ClientController'
 
-router.post('/create', (req, res) => {
-    res.json({msg: 'OK'})
-})
+router.post('/create', ClientController.hello)
 
 export default router

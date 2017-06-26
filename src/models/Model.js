@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
-import config from `${__dirname}/../../config/${process.env.NODE_ENV}/config`
+import { config } from '../config'
+
 mongoose.Promise = global.Promise
-mongoose.connect(`mongodb://${config.mongo.host}:${config.mongo.port}/${config.mongo.db}`)
+mongoose.connect(`mongodb://${config.mongo.host}:${config.mongo.port}/${config.mongo.dbName}`)
 export default { mongoose }
