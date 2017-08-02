@@ -1,4 +1,5 @@
 node_modules
 dist
-src/config/dev/certs
-src/config/prod/certs
+*.key
+*.pem
+*.crt
