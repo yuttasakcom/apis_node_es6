@@ -10,8 +10,8 @@ router(app)
 
 const env = process.env.NODE_ENV || 'prod'
 const options = {
-  key: fs.readFileSync(`${__dirname}/config/${env}/certs/default.key`, 'utf8'),
-  cert: fs.readFileSync(`${__dirname}/config/${env}/certs/default.crt`, 'utf8')
+  key: fs.readFileSync(`${__dirname}/config/${env}/default.key`, 'utf8'),
+  cert: fs.readFileSync(`${__dirname}/config/${env}/default.crt`, 'utf8')
 }
 
 const server = https.createServer(options, app)
