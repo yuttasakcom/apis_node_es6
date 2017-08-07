@@ -4,6 +4,7 @@
     <img src="https://api.travis-ci.org/yuttasakcom/NodeAPI.svg?branch=master" />
   </a>
   <a title="CII Best Practices" href="https://bestpractices.coreinfrastructure.org/projects/1169"><img src="https://bestpractices.coreinfrastructure.org/projects/1169/badge"></a>
+  <a href='https://coveralls.io/github/yuttasakcom/NodeAPI'><img src='https://coveralls.io/repos/github/yuttasakcom/NodeAPI/badge.svg' alt='Coverage Status' /></a>
 </p>
 
 ## Step 1 : Clone Project
