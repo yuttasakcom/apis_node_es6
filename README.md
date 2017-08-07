@@ -1,7 +1,7 @@
 ## Node API
 <p align="left">
   <a href="https://travis-ci.org/yuttasakcom/NodeAPI">
-    <img src="https://api.travis-ci.org/yuttasakcom/NodeAPI.svg?branch=master">
+    <img src="https://api.travis-ci.org/yuttasakcom/NodeAPI.svg?branch=master" />
   </a>
   <a title="CII Best Practices" href="https://bestpractices.coreinfrastructure.org/projects/1169"><img src="https://bestpractices.coreinfrastructure.org/projects/1169/badge"></a>
 </p>
