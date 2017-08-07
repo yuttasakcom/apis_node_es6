@@ -1,20 +1,20 @@
 {
-  "name": "apis_node_es6",
+  "name": "NodeAPI",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:yuttasakcom/apis_node_es6.git",
-  "author": "Yuttasak Pannawat <yuttasak@hot-now.com>",
+  "repository": "git@github.com:yuttasakcom/NodeAPI.git",
+  "author": "Yuttasak Pannawat <yuttasakcom@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -s -D -d dist --presets es2015,stage-0",
-    "dev": "NODE_ENV=dev nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
-    "start": "NODE_ENV=dev nodemon -w src --exec \"babel-node src --presets es2015,stage-0\""
+    "build": "babel src -d dist",
+    "start": "NODE_ENV=develop nodemon src/index.js --exec babel-node",
+    "serve": "NODE_ENV=production node dist/index.js"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
