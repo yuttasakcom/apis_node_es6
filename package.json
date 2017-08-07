@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src -d dist",
-    "start": "NODE_ENV=develop nodemon src/index.js --exec babel-node",
-    "serve": "NODE_ENV=production node dist/index.js"
+    "start": "NODE_ENV=local nodemon src/index.js --exec babel-node",
+    "dev": "NODE_ENV=develop nodemon src/index.js --exec babel-node"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
