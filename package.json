@@ -9,18 +9,11 @@
     "build": "babel src -d dist",
     "start": "NODE_ENV=local nodemon src/index.js --exec babel-node",
     "dev": "NODE_ENV=develop nodemon src/index.js --exec babel-node",
-    "test": "NODE_ENV=test mocha --require blanket --reporter mocha-lcov-reporter"
+    "test": "NODE_ENV=test mocha --require blanket"
   },
   "config": {
     "blanket": {
-      "pattern": "test/*.test.js",
-      "data-cover-never": [
-        "node_modules",
-        "public"
-      ],
-      "data-cover-reporter-options": {
-        "shortnames": true
-      }
+      "pattern": "test/*.test.js"
     }
   },
   "devDependencies": {
@@ -31,7 +24,6 @@
     "blanket": "^1.2.3",
     "expect": "^1.20.2",
     "mocha": "^3.5.0",
-    "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
