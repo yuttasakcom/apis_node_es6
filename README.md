@@ -14,7 +14,7 @@ git clone git@github.com:yuttasakcom/NodeAPI.git && cd NodeAPI
 
 ## Step 2: Generate Cert
 ```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout src/config/dev/default.key -out src/config/dev/default.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout src/config/develop/default.key -out src/config/develop/default.crt
 ```
 
 ## Step 3: Install Modules
