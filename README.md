@@ -1,6 +1,8 @@
 ## Node API
 <p align="left">
-  [![Build Status](https://travis-ci.org/Flutterwave/nodeAPI.svg?branch=master)]
+  <a href="https://travis-ci.org/yuttasakcom/NodeAPI">
+    <img src="https://api.travis-ci.org/yuttasakcom/NodeAPI.svg?branch=master">
+  </a>
   <a title="CII Best Practices" href="https://bestpractices.coreinfrastructure.org/projects/1169"><img src="https://bestpractices.coreinfrastructure.org/projects/1169/badge"></a>
 </p>
 
