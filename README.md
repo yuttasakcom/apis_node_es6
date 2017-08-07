@@ -1,9 +1,7 @@
-<p align="center">
+## Node API
+<p align="left">
   <a title="CII Best Practices" href="https://bestpractices.coreinfrastructure.org/projects/1169"><img src="https://bestpractices.coreinfrastructure.org/projects/1169/badge"></a>
 </p>
-
-## Node API
-> Node api ES6
 
 ## Step 1 : Clone Project
 ```
