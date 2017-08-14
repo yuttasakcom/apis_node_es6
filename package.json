@@ -9,7 +9,8 @@
     "start": "node server/index.js",
     "server": "nodemon server/index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client" 
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
