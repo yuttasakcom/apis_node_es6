@@ -1,3 +1,4 @@
+<img src="https://travis-ci.org/yuttasakcom/NodeAPI.svg?branch=master">
 ## Node API
 > Full Stack Javascript (React + NodeJS)
 
