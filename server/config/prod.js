@@ -5,6 +5,8 @@ module.exports = {
   facebookClientSecret: process.env.FACEBOOK_CLIENT_SECRET,
   twitterClientID: process.env.TWITTER_CLIENT_ID,
   twitterClientSecret: process.env.TWITTER_CLIENT_SECRET,
+  lineClientID: process.env.LINE_CLIENT_ID,
+  lineClientSecret: process.env.LINE_CLIENT_SECRET,
   mongoURL: process.env.MONGO_URI,
   cookieKey: process.env.COOKIE_KEY,
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
