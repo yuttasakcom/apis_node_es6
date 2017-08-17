@@ -1,6 +1,5 @@
 ## Node API
  [![Build Status](https://travis-ci.org/yuttasakcom/NodeAPI.svg)](https://travis-ci.org/yuttasakcom/NodeAPI)
-> Full Stack Javascript (React + NodeJS)
 
 ## Setup
 current folder run `npm install`<br>
