@@ -2,25 +2,24 @@
 > Full Stack Javascript (React + NodeJS)
 
 ## Setup
-after clone cd NodeAPI
-run `npm install`<br>
-and<br>
-cd folder client run `npm install`<br>
-after install packages
+server run `npm install`<br>
+client run `npm install`<br>
+
+## Generate config
 create file dev.js in folder config<br>
 ```javascript
 module.exports = {
-  googleClientID: process.env.GOOGLE_CLIENT_ID,
-  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  facebookClientID: process.env.FACEBOOK_CLIENT_ID,
-  facebookClientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-  twitterClientID: process.env.TWITTER_CLIENT_ID,
-  twitterClientSecret: process.env.TWITTER_CLIENT_SECRET,
-  mongoURL: process.env.MONGO_URI,
-  cookieKey: process.env.COOKIE_KEY,
-  stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-  stripeSecretKey: process.env.STRIPE_SECRET_KEY,
-  sendGridKey: process.env.SEND_GRID_KEY,
-  redirectDomain: process.env.REDIRECT_DOMAIN
+  googleClientID: 'YOUR GOOGLE_CLIENT_ID',
+  googleClientSecret: 'YOUR GOOGLE_CLIENT_SECRET',
+  facebookClientID: 'YOUR FACEBOOK_CLIENT_ID',
+  facebookClientSecret: 'YOUR FACEBOOK_CLIENT_SECRET',
+  twitterClientID: 'YOUR TWITTER_CLIENT_ID',
+  twitterClientSecret: 'YOUR TWITTER_CLIENT_SECRET',
+  mongoURL: 'YOUR MONGO_URI',
+  cookieKey: 'YOUR COOKIE_KEY',
+  stripePublishableKey: 'YOUR STRIPE_PUBLISHABLE_KEY',
+  stripeSecretKey: 'YOUR STRIPE_SECRET_KEY',
+  sendGridKey: 'YOUR SEND_GRID_KEY',
+  redirectDomain: 'YOUR REDIRECT_DOMAIN'
 }
 ```
