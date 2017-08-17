@@ -2,8 +2,8 @@
 > Full Stack Javascript (React + NodeJS)
 
 ## Setup
-server run `npm install`<br>
-client run `npm install`<br>
+current folder run `npm install`<br>
+client folder run `npm install`<br>
 
 ## Generate config
 create file dev.js in folder config<br>
