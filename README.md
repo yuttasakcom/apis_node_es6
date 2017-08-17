@@ -1,6 +1,5 @@
-<img src="https://travis-ci.org/yuttasakcom/NodeAPI.svg?branch=master">
-
 ## Node API
+ [![Build Status](https://travis-ci.org/yuttasakcom/NodeAPI.svg)](https://travis-ci.org/yuttasakcom/NodeAPI)
 > Full Stack Javascript (React + NodeJS)
 
 ## Setup
