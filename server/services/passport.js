@@ -82,7 +82,7 @@ passport.use(new GoogleStrategy({
 },
 async (accessToken, refreshToken, profile, done) => {
 
-  const existingUser = await User.findOne({google: {id: profile.id}})
+  const existingUser = await User.findOne({'google.id': profile.id})
 
   if (existingUser) {
     return done(null, existingUser)
@@ -107,7 +107,7 @@ passport.use(new FacebookStrategy({
 },
 async (accessToken, refreshToken, profile, done) => {
 
-  const existingUser = await User.findOne({facebook: {id: profile.id}})
+  const existingUser = await User.findOne({'facebook.id': profile.id})
   
   if (existingUser) {
     return done(null, existingUser)
@@ -131,13 +131,11 @@ passport.use(new TwitterStrategy({
   callbackURL: '/auth/twitter/callback',
 },
 async (accessToken, refreshToken, profile, done) => {
-  const existingUser = await User.findOne({twitter: {id: profile.id}})
+  const existingUser = await User.findOne({'twitter.id': profile.id})
   
   if (existingUser) {
     return done(null, existingUser)
   }
-
-  console.log(profile)
 
   const user = await new User({twitter: {
     id: profile.id,
@@ -150,20 +148,18 @@ async (accessToken, refreshToken, profile, done) => {
   done(null, user)
 }))
 
-// Twitter Strategy
+// Line Strategy
 passport.use(new LineStrategy({
   channelID : keys.lineClientID,
   channelSecret : keys.lineClientSecret,
   callbackURL: '/auth/line/callback',
 },
 async (accessToken, refreshToken, profile, done) => {
-  const existingUser = await User.findOne({line: {id: profile.id}})
+  const existingUser = await User.findOne({'line.id': profile.id})
   
   if (existingUser) {
     return done(null, existingUser)
   }
-
-  console.log(profile)
 
   const user = await new User({line: {
     id: profile.id,

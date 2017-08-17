@@ -1,4 +1,5 @@
 const passport = require('passport')
+const Logined = require('../middleware/Logined')
 
 module.exports = app => {
   app.get('/success', (req, res) => res.send('success'))
@@ -15,14 +16,14 @@ module.exports = app => {
 		failureFlash : true
   }))
   
-  app.post('/login', passport.authenticate('local-login', {
+  app.post('/login', Logined, passport.authenticate('local-login', {
     successRedirect : '/success',
     failureRedirect : '/fail',
     failureFlash : true
   }))
 
   // Authenticate Google
-  app.get('/auth/google', passport.authenticate('google', {
+  app.get('/auth/google', Logined, passport.authenticate('google', {
     scope: ['profile', 'email']
   }))
 
@@ -30,12 +31,12 @@ module.exports = app => {
     '/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
-      res.redirect('/surveys')
+      res.redirect('/api/current_user')
     }
   )
 
   // Authenticate Facebook
-  app.get('/auth/facebook', passport.authenticate('facebook', {
+  app.get('/auth/facebook', Logined, passport.authenticate('facebook', {
     scope: 'email'
   }))
 
@@ -43,12 +44,12 @@ module.exports = app => {
     '/auth/facebook/callback',
     passport.authenticate('facebook'),
     (req, res) => {
-      res.redirect('/surveys')
+      res.redirect('/api/current_user')
     }
   )
 
   // Authenticate Twitter
-  app.get('/auth/twitter', passport.authenticate('twitter', {
+  app.get('/auth/twitter', Logined, passport.authenticate('twitter', {
     scope: 'email'
   }))
 
@@ -56,18 +57,18 @@ module.exports = app => {
     '/auth/twitter/callback',
     passport.authenticate('twitter'),
     (req, res) => {
-      res.redirect('/surveys')
+      res.redirect('/api/current_user')
     }
   )
 
   // Authenticate Line
-  app.get('/auth/line', passport.authenticate('line'))
+  app.get('/auth/line', Logined, passport.authenticate('line'))
 
   app.get(
     '/auth/line/callback',
     passport.authenticate('line'),
     (req, res) => {
-      res.redirect('/surveys')
+      res.redirect('/api/current_user')
     }
   )
 

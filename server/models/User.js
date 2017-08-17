@@ -5,22 +5,8 @@ const { Schema } = mongoose
 
 const userSchema = new Schema({
   local: {
-    email: {
-      type: String,
-      unique: true,
-      trim: true,
-      lowercase: true,
-      minlength: 1,
-      validate: {
-        isAsync: true,
-        validator: validator.isEmail,
-        message: '{VALUE} is not a valid email'
-      }
-    },
-    password: {
-      type: String,
-      minlength: 6
-    },
+    email: {type: String, default: ''},
+    password: {type: String, default: ''},
     activated_email: {type: Boolean, default: false}
   },
   google: {
