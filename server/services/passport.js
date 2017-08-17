@@ -3,6 +3,7 @@ const LocalStrategy = require('passport-local').Strategy
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const FacebookStrategy = require('passport-facebook').Strategy
 const TwitterStrategy  = require('passport-twitter').Strategy
+const LineStrategy  = require('passport-line').Strategy
 
 const mongoose = require('mongoose')
 
@@ -130,7 +131,7 @@ passport.use(new TwitterStrategy({
   callbackURL: '/auth/twitter/callback',
 },
 async (accessToken, refreshToken, profile, done) => {
-  const existingUser = await User.findOne({twiiter: {id: profile.id}})
+  const existingUser = await User.findOne({twitter: {id: profile.id}})
   
   if (existingUser) {
     return done(null, existingUser)
@@ -139,6 +140,32 @@ async (accessToken, refreshToken, profile, done) => {
   console.log(profile)
 
   const user = await new User({twitter: {
+    id: profile.id,
+    displayname: profile.displayName,
+    name: profile.name,
+    emails: profile.emails,
+    photos: profile.photos,
+    gender: profile.gender,
+  }}).save()
+  done(null, user)
+}))
+
+// Twitter Strategy
+passport.use(new LineStrategy({
+  channelID : keys.lineClientID,
+  channelSecret : keys.lineClientSecret,
+  callbackURL: '/auth/line/callback',
+},
+async (accessToken, refreshToken, profile, done) => {
+  const existingUser = await User.findOne({line: {id: profile.id}})
+  
+  if (existingUser) {
+    return done(null, existingUser)
+  }
+
+  console.log(profile)
+
+  const user = await new User({line: {
     id: profile.id,
     displayname: profile.displayName,
     name: profile.name,

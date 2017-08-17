@@ -47,6 +47,14 @@ const userSchema = new Schema({
     photos: {type: Object, default: null},
     gender: {type: Object, default: ''},
   },
+  line: {
+    id: String,
+    displayname: String,
+    name: {type: Object, default: null},
+    emails: {type: Object, default: null},
+    photos: {type: Object, default: null},
+    gender: {type: Object, default: ''},
+  },
   credits: { type: Number, default: 0},
 })
 

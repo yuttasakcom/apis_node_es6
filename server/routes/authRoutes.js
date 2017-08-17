@@ -60,6 +60,17 @@ module.exports = app => {
     }
   )
 
+  // Authenticate Line
+  app.get('/auth/line', passport.authenticate('line'))
+
+  app.get(
+    '/auth/line/callback',
+    passport.authenticate('line'),
+    (req, res) => {
+      res.redirect('/surveys')
+    }
+  )
+
   // Authenticate Apis
   app.get('/api/logout', (req, res) => {
     req.logout()
