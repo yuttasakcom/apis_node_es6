@@ -25,3 +25,6 @@ module.exports = {
   redirectDomain: 'YOUR REDIRECT_DOMAIN'
 }
 ```
+
+## Run Project
+`npm run dev`
