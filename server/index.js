@@ -10,7 +10,7 @@ require('./models/User')
 require('./services/passport')
 
 mongoose.Promise = global.Promise
-mongoose.createConnection(keys.mongoURL)
+mongoose.connect(keys.mongoURL, {useMongoClient: true})
 
 const app = express()
 app.use(bodyParser.json())
