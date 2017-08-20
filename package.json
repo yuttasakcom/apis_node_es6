@@ -6,6 +6,7 @@
   "author": "Yuttasak Pannawat <yuttasakcom@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "test": "nodemon --exec 'mocha --recursive -R min'",
     "start": "node server/index.js",
     "server": "nodemon server/index.js",
     "client": "npm run start --prefix client",
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
+    "mocha": "^3.5.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
